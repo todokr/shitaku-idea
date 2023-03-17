@@ -13,6 +13,18 @@
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.todokr.shitakuidea.listeners.MyFrameStateListener" topic="com.intellij.ide.FrameStateListener"/>
+        <listener class="com.github.todokr.shitakuidea.listeners.MyFrameStateListener"
+                  topic="com.intellij.ide.FrameStateListener"/>
     </applicationListeners>
+
+    <actions>
+        <action id="com.github.todokr.shitakuidea.CopyPathAction"
+                class="com.github.todokr.shitakuidea.CopyPathAction"
+                text="Copy Path from Root"
+                description="Just copy file path from project root"
+                icon="AllIcons.Actions.Copy">
+            <keyboard-shortcut keymap="$default" first-keystroke="control alt C"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>
