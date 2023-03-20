@@ -19,12 +19,13 @@ ide.registerAction(selectionActionId, "Format CSV as Table") { e ->
 }
 
 """
-Col1,Col2,Col3
-Value1,Value2,Value3
-Separate,cols,with a colon in DSL
-This is a row with only one cell,,
-,This is a row with only 2nd cell,
-,,This is a row with only 3nd cell
+ Col1                             | Col2                             | Col3                             
+----------------------------------|----------------------------------|----------------------------------
+ Value1                           | Value2                           | Value3                           
+ Separate                         | cols                             | with a colon in DSL              
+ This is a row with only one cell |                                  |                                  
+                                  | This is a row with only 2nd cell |                                  
+                                  |                                  | This is a row with only 3nd cell 
 """
 
 private val delimiter: String = "|"
